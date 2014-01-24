@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="mac">
+    <meta name="description" content="Example 404 page for Cargo Media">
+
+    <title>404 - broken link</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <!--link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /-->
+
+    <meta property="og:title" content="404 - invader attack" />
+    <meta property="og:description" content="Example 404 page for Cargo Media" />
+    <meta property="og:type" content="website" /> 
+
+    <!-- styles -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css?v=0.1">
+    <link rel="stylesheet" href="css/syntax.css">
+
+    <!-- scripts -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+    $( document ).ready(function() {
+      for (var i = 0; i < 9; i++) {
+        var randomLeft = Math.ceil(Math.random() * 90) + 1;
+        var randomTop = Math.ceil(Math.random() * 30) + 1;
+
+        $('<div/>', {'class':'spaceInvader invader-' + i}).appendTo('.sky');
+        $('.invader-' + i).css({top: randomTop+'%', left: randomLeft+'%'});
+      }
+    });
+    </script>
+  </head>
+
+  <body>
+    <div class="sky"></div>
+
+    <div class="container">
+      <div class="alertBox">
+        <div class="spaceMother"></div>
+
+        <p class="error">404</p>
+        <p class="alert">Sorry but the site you are looking for has been stolen from <span class="markupText">invaders from space</span></p>
+      </div>
+    </div>
+  </body>
+</html>
